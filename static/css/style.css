@@ -1,0 +1,95 @@
+html {
+    height: 50%
+}
+
+#particles-js canvas {
+    display: block;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+    transition: opacity .8s ease, transform 1.4s ease
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -10;
+    top: 0;
+    left: 0
+}
+
+
+.wrapper {
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   }
+   .wrapper span {
+    display: inline-block;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80px;
+    text-transform: uppercase;
+    font-weight: bold;
+   }
+   .wrapper span:nth-of-type(2) {
+    animation-delay: .05s;
+   }
+   .wrapper span:nth-of-type(3) {
+    animation-delay: .1s;
+   }
+   .wrapper span:nth-of-type(4) {
+    animation-delay: .15s;
+   }
+   .wrapper span:nth-of-type(5) {
+    animation-delay: .2s;
+   }
+   .wrapper span:nth-of-type(6) {
+    animation-delay: .25s;
+   }
+   .wrapper span:nth-of-type(7) {
+    animation-delay: .3s;
+   }
+   .wrapper span:nth-of-type(8) {
+    animation-delay: .35s;
+   }
+   .wrapper span:nth-of-type(9) {
+    animation-delay: .4s;
+   }
+   .wrapper span:nth-of-type(10) {
+    animation-delay: .45s;
+   }
+   .wrapper span {
+    color: #000;
+    opacity: 0;
+    transform: translate(-155px, 0) scale(.4);
+    animation: animate .5s forwards;
+   }
+   @keyframes animate {
+    40% {
+     transform: translate(50px, 0) scale(.7);
+     opacity: 1;
+     color: rgb(17, 17, 17);
+    }
+    60% {
+     color: rgb(0, 0, 0);
+    }
+    80% {
+     transform: translate(0) scale(2);
+     opacity: 0;
+    }
+    100% {
+     transform: translate(0) scale(1);
+     opacity: 1;
+    }
+   }
+
+   .parallax{
+       background-size: cover;
+       background-attachment: fixed;
+       height: 500px;
+   }
