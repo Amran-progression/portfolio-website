@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="/static/css/style.css">
     <style>
@@ -15,57 +16,62 @@
     </style>
 </head>
 <body>
-    <div id="particles-js"></div>
-    
-    <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-home" href="http://127.0.0.1:5000/">
-      <img class="image-glow" src="/static/logo.png" width="250" height="200" alt="home button">
-    </a>
-    <a class="navbar-about" href="#about">
-        <img class="image-glow" src="/static/aboutme.png" width="180" height="150" alt="about me">
-      </a>
-      <a class="navbar-about" href="#education">
-        <img class="image-glow" src="/static/education.png" width="180" height="150" alt="education">
-      </a>
-      <a class="navbar-about" href="#experience">
-        <img class="image-glow" src="/static/experience.png" width="150" height="135" alt="experience">
-      </a>
-    </nav>
-    <div class="wrapper">
-      <span>W</span>
-      <span>E</span>
-      <span>L</span>
-      <span>C</span>
-      <span>O</span>
-      <span>M</span>
-      <span>E</span>
-      <span>!</span>
-      <span>!</span>
-      <span>!</span>
-     </div>
+    <div class="nav-container">
+      <nav class="navbar">
+        <a class="navbar-home" href="#home">
+          <img class="image-glow" src="/static/logo.png" width="100" height="100" alt="home button">
+        </a>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-links">About Me</a></li>
+          <li><a href="#education" class="nav-links">Education</a></li>
+          <li><a href="#projects" class="nav-links">Projects</a></li>
+          <li><a href="#contact" class="nav-links nav-links-btn">Contact</a></li>
+        </ul>
+      </nav>
+      <section id="home">
+        <div id="typed-strings">
+          <h2>Welcome... to my corner of the <strong>net</strong></h2>
+        </div>
+        <span id="typed"></span>
+      </section>
+      <section id="about">
 
-     <div class="container">
-       <div id="about" class="parallax">
-       </div>
-     </div>
+      </section>
+      <section id="education">
+
+      </section>
+      <section id="projects">
+
+      </section>
+      <section id="contact">
+
+      </section>
+
+    </div>
+    <div id="particles-js"></div>
      
     
     
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="{{ url_for('static', filename='typed.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
     <script>
         particlesJS.load('particles-js', "{{ url_for('static', filename='particles.json') }}", function(){
             console.log('particles.json loaded...')
         });
     </script> 
+  
     <script>
-      var options = {
-      strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
-      typeSpeed: 40
-    };
-
-      var typed = new Typed('.typed-string', options);
-    </script> 
+      var typed = new Typed('#typed', {
+        stringsElement: '#typed-strings',
+        typeSpeed: 100,
+        backSpeed: 100,
+      });
+    </script>
 </body>
 </html>

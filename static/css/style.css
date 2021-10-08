@@ -1,5 +1,54 @@
-html {
-    height: 50%
+
+
+:root {
+    --darkgrey:#09090a;
+    --brightred: #F9423D;
+    --white: #fff;
+    --lightred: #f9433dcc;
+}
+
+* {
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.navbar {
+    display: grid;
+    
+    align-items: center;
+    height: 80px;
+    width: 90%;
+    max-width: 1720px;
+    margin: 0 auto;
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    list-style: none;
+    text-align: center;
+    width: 70%;
+    justify-self: end;
+}
+
+.nav-links {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+
+}
+
+.nav-links:hover {
+    color: var(--brightred);
+    transition: all 0.2s ease-out;
+}
+
+.image-glow {
+    position:absolute;
+    left:10px;
+    top:10px;
+    margin: 0px 15px 15px 0px;
 }
 
 #particles-js canvas {
@@ -21,6 +70,19 @@ html {
     left: 0
 }
 
+[id="typed"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+
+
+}
 
 .wrapper {
     font-size: 50px;
@@ -31,7 +93,6 @@ html {
    }
    .wrapper span {
     display: inline-block;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 80px;
     text-transform: uppercase;
     font-weight: bold;
