@@ -1,77 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="/static/css/style.css">
-    <style>
-        .image-glow:hover{
-        color: #111;  
-        box-shadow: 0 0 100px rgb(63, 65, 61); 
-        }
-        
-    </style>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+	<title>My Portfolio</title>
+	<link rel="stylesheet" href="/static/css/style.css">
+	<style>
+	.image-glow:hover {
+		color: #F9423D;
+		box-shadow: 0 0 100px #F9423D;
+		padding: 5px;
+	}
+	</style>
 </head>
+
 <body>
-    <div class="nav-container">
-      <nav class="navbar">
-        <a class="navbar-home" href="#home">
-          <img class="image-glow" src="/static/logo.png" width="100" height="100" alt="home button">
-        </a>
-        <div class="menu-toggle" id="mobile-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-        <ul class="nav-menu">
-          <li><a href="#about" class="nav-links">About Me</a></li>
-          <li><a href="#education" class="nav-links">Education</a></li>
-          <li><a href="#projects" class="nav-links">Projects</a></li>
-          <li><a href="#contact" class="nav-links nav-links-btn">Contact</a></li>
-        </ul>
-      </nav>
-      <section id="home">
-        <div id="typed-strings">
-          <h2>Welcome... to my corner of the <strong>net</strong></h2>
-        </div>
-        <span id="typed"></span>
-      </section>
-      <section id="about">
-
-      </section>
-      <section id="education">
-
-      </section>
-      <section id="projects">
-
-      </section>
-      <section id="contact">
-
-      </section>
-
-    </div>
-    <div id="particles-js"></div>
-     
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-    <script>
-        particlesJS.load('particles-js', "{{ url_for('static', filename='particles.json') }}", function(){
-            console.log('particles.json loaded...')
-        });
-    </script> 
-  
-    <script>
-      var typed = new Typed('#typed', {
-        stringsElement: '#typed-strings',
-        typeSpeed: 100,
-        backSpeed: 100,
-      });
-    </script>
+	<div class="container">
+		<nav class="navbar">
+			<a class="navbar-home" href="#home"> <img class="image-glow" src="/static/logo.png" width="100" height="100" alt="home button"> </a>
+			<ul class="nav-menu">
+				<li><a href="#about" class="nav-links">About Me</a></li>
+				<li><a href="#education" class="nav-links">Education</a></li>
+				<li><a href="#projects" class="nav-links">Projects</a></li>
+				<li><a href="#contact" class="nav-links nav-links-btn">Contact</a></li>
+			</ul>
+		</nav>
+		<section id="home">
+			<div id="typed-strings">
+				<h2>Welcome to my corner of the <strong>net</strong></h2> </div> <span id="typed"></span> </section>
+		<section id="about">
+			<div id="typed-strings2">
+				<h2>About Me</h2> </div> <span id="typed2"></span> <img class="about-pic" src="/static/about.jpg" width="100" height="100" alt="profile">
+			<p align="left">Hello! My name is <strong> Amran Hussain </strong> and I'm an <strong>aspiring software engineer.</strong>
+				<p/>
+				<p align="left"> Right now I want to specialize in <strong>game programming</strong> and <strong> virtual reality. </strong> </p>
+				<p align="left">I call <a href="https://en.wikipedia.org/wiki/Champaign,_Illinois">Champaign, Illinois</a> my home, the land of the cornfields and squirrels. </p>
+				<p align="left"> My dream job is to work for a triple A game company like <strong> Activision Blizzard , Riot Games, or Bethesda. </strong> </p>
+		</section>
+		<section id="education">
+			<div id="typed-strings3">
+				<h2>Education</h2> </div> <span id="typed3"></span>
+			<div class="row">
+				<a href="https://www.parkland.edu/Main/Academics/Departments/Business-Computer-Science-Technologies/Areas-of-Study/Computer-Science-Programs"> <img class="edu-pic1" src="/static/education1.jpg" width="100" height="100" alt="Parkland College"> </a>
+				<h2> Computer Science </h2>
+				<p> Champaign, IL </p>
+				<div class="column"> </div>
+				<div class="column">
+					<a href="https://www.lakelandcollege.edu/academic-programs/"> <img class="edu-pic1" src="/static/education2.jpg" width="100" height="100" alt="Lake Land College"> </a>
+					<h2> Pre-Engineering </h2>
+					<p> Mattoon, IL </div>
+		</section>
+		<section id="projects">
+			<div id="typed-strings4">
+				<h2>Projects</h2> </div> <span id="typed4"></span>
+			<a href="https://github.com/Amran-progression"> <img class="github-pic" src="/static/GitHubLogo.png" width="200" height="100" alt="GitHub"> </a>
+		</section>
+		<section id="contact">
+			<div id="typed-strings5">
+				<h2>Contact</h2> </div> <span id="typed5"></span> <img class="mail-pic" src="/static/mailLogo.png" width="100" height="100" alt="GitHub">
+			<p class="glow"> ahussain96@gmail.com
+				<p>
+		</section>
+		</div>
+		<div id="particles-js"></div>
+		<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+		<script>
+		particlesJS.load('particles-js', "{{ url_for('static', filename='particles.json') }}", function() {
+			console.log('particles.json loaded...')
+		});
+		</script>
+		<script>
+		var typed = new Typed('#typed', {
+			stringsElement: '#typed-strings',
+			typeSpeed: 100,
+			backSpeed: 50,
+			loop: true,
+			backDelay: 5000,
+			startDelay: 500,
+			showCursor: false
+		});
+		var typed = new Typed('#typed2', {
+			stringsElement: '#typed-strings2',
+			typeSpeed: 100,
+			backSpeed: 50,
+			loop: true,
+			backDelay: 3000,
+			startDelay: 500,
+			showCursor: false
+		});
+		var typed = new Typed('#typed3', {
+			stringsElement: '#typed-strings3',
+			typeSpeed: 100,
+			backSpeed: 50,
+			loop: true,
+			backDelay: 3000,
+			startDelay: 500,
+			showCursor: false
+		});
+		var typed = new Typed('#typed4', {
+			stringsElement: '#typed-strings4',
+			typeSpeed: 100,
+			backSpeed: 50,
+			loop: true,
+			backDelay: 3000,
+			startDelay: 500,
+			showCursor: false
+		});
+		var typed = new Typed('#typed5', {
+			stringsElement: '#typed-strings5',
+			typeSpeed: 100,
+			backSpeed: 50,
+			loop: true,
+			backDelay: 3000,
+			startDelay: 500,
+			showCursor: false
+		});
+		</script>
 </body>
+
 </html>
